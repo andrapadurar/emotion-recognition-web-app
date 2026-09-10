@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+env/
+.env
+
+# uploads temporare
+uploads/
+
+# frontend (se ruleaza separat)
+frontend/
+
+# Git
+.git/
+.gitignore
+
+# VS Code
+.vscode/

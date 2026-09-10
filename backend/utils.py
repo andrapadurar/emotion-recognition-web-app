@@ -2,7 +2,9 @@ import os
 import uuid
 from pathlib import Path
 
-# functii ajutatoare: salvare fisier, validare extensii, generare nume unic
+#funcții auxiliare utilizate pentru gestionarea fișierelor încărcate, validarea extensiilor 
+# și generarea unor nume unice
+
 
 def ensure_folder_exists(folder_path: str) -> None:
     os.makedirs(folder_path, exist_ok=True)

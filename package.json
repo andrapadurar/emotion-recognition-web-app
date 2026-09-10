@@ -1,0 +1,27 @@
+{
+  "name": "emotion_web_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "scripts": {
+    "backend": "venv\\Scripts\\python.exe -m uvicorn backend.main:app --reload",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrapadurar/emotion-recognition-web-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/andrapadurar/emotion-recognition-web-app/issues"
+  },
+  "homepage": "https://github.com/andrapadurar/emotion-recognition-web-app#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.0"
+  }
+}
