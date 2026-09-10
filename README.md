@@ -20,32 +20,17 @@ Supports real-time webcam analysis, image upload and video analysis with tempora
 **Backend**
 - Python 3.11
 - FastAPI
-- DeepFace 
+- DeepFace
 - OpenCV
+- TensorFlow / Keras
+- Pydantic
+
 
 **Frontend**
-- React (Vite)
+- React
+- Vite
 - Recharts
 
-## Project Structure
-
-```
-emotion-recognition-web-app/
-├── app/
-│   ├── config.py          # upload directories, extensions, size limits
-│   ├── emotions.py        # DeepFace analysis logic
-│   ├── schemas.py         # Pydantic response models
-│   ├── utils.py           # helper functions
-│   ├── video_analysis.py  # frame-by-frame video processing
-│   └── __init__.py
-├── frontend/
-│   └── src/
-│       ├── App.jsx        # main React component
-│       └── App.css        # styles
-├── main.py                # FastAPI app entry point
-├── requirements.txt
-└── README.md
-```
 
 ## Getting Started
 
@@ -53,6 +38,7 @@ emotion-recognition-web-app/
 
 - Python 3.11+
 - Node.js 18+
+- npm 
 
 ### Backend Setup
 
@@ -70,27 +56,23 @@ venv\Scripts\activate
 # macOS/Linux
 source venv/bin/activate
 
-# Install dependencies
+# Install backend dependencies
 pip install -r requirements.txt
 
-# Start the backend server
-uvicorn main:app --reload
+# Install frontend dependencies
+cd frontend
+npm install
+cd ..
+
+# Install the root dependencies
+npm install
+
+# Run the application 
+npm run dev
 ```
 
 The API will be available at `http://127.0.0.1:8000`  
 Interactive API docs at `http://127.0.0.1:8000/docs`
-
-### Frontend Setup
-
-```bash
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-```
 
 The app will be available at `http://localhost:5173`
 
